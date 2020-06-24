@@ -46,3 +46,9 @@ h2{
     color: red;
     text-align: right;
 }
+#score{
+    font-size: 25px;
+    font-weight: bold;
+    color: orange;
+    text-align: left;
+}

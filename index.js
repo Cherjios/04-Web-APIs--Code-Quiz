@@ -2,13 +2,12 @@ var questionEl = document.getElementById("question");
 var mainEl = document.getElementById("main");
 var startButtonEl = document.getElementById("startButton");
 var timerEl = document.getElementById("timer");
+var scoreEl = document.getElementById("score");
 //List of button answers
 var AButtonEl = document.getElementById("AButton");
 var BButtonEl = document.getElementById("BButton");
 var CButtonEl = document.getElementById("CButton");
 var DButtonEl = document.getElementById("DButton");
-
-
 
 //List of questions
 var question1 = {question:"Q 1 - Which of the following is correct about features of JavaScript?",
@@ -23,7 +22,11 @@ var question2 = {question:"Q 2 - Which of the following is the correct syntax to
     B:"browser.location='http://www.newlocation.com",
     C:"navigator.location='http://www.newlocation.com"}
 
-
+var question3 = {question:"Q 3- Which of the following type of variable takes precedence over other if names are same?",
+    correctAnswer:"local variable", 
+    A:"global variable", 
+    B:"Both of local and global variables.",
+    C:"None of them"}
 
 
 
@@ -45,19 +48,17 @@ setTextcodingQuizchallenge();
 //Function to button to start quiz
 startButtonEl.addEventListener("click", function(){
     //Start time 
-    startTimer(timeLeft);
+    startTimer(60);
     
-   
 })
 
-var timeLeft = 60;
 
 function startTimer(timeLeft) {
     
     var timeInterval = setInterval(function() {
       timerEl.textContent = timeLeft + " seconds remaining";
       timeLeft--;
-      MakeQuestion1();
+    //   MakeQuestion1();
 
   
       if (timeLeft === 0) {
@@ -73,6 +74,8 @@ function startTimer(timeLeft) {
       }
   
     }, 1000);
+    MakeQuestion1();
+
   }
 
 function MakeQuestion1(){
@@ -90,10 +93,12 @@ function MakeQuestion1(){
     DButtonEl.textContent = question1.correctAnswer;
     //Wrong Answer
     AButtonEl.addEventListener("click",function(){
-        // clearInterval(startTimer);
+        clearInterval(startTimer);
         // timeLeft = 45;
         // startTimer(timeLeft);
+       
         MakeQuestion2();
+
     })
 
     //Right Answer
@@ -113,12 +118,34 @@ function MakeQuestion2(){
     CButtonEl.textContent = question2.C;
     DButtonEl.style.display ="inline-block";
     DButtonEl.textContent = question2.correctAnswer;
+    
     AButtonEl.addEventListener("click",function(){
         
         
     })
     //Right Answer
-    SButtonEl.addEventListener("click",function(){
-        MakeQuestion2();
+    DButtonEl.addEventListener("click",function(){
+        MakeQuestion3();
+    })
+}
+
+function MakeQuestion3(){
+    startButtonEl.style.display = "none";
+    questionEl.textContent = question3.question;
+    AButtonEl.style.display ="inline-block";
+    AButtonEl.textContent = question3.correctAnswer;
+    BButtonEl.style.display ="inline-block";
+    BButtonEl.textContent = question3.B;
+    CButtonEl.style.display ="inline-block";
+    CButtonEl.textContent = question3.C;
+    DButtonEl.style.display ="inline-block";
+    DButtonEl.textContent = question3.A;
+    BButtonEl.addEventListener("click",function(){
+        
+        
+    })
+    //Right Answer
+    AButtonEl.addEventListener("click",function(){
+        MakeQuestion4();
     })
 }
