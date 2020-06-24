@@ -1,19 +1,19 @@
+.container{
+    text-align: center;
+}
 h1{
     color: blue;
     font-size:50px;
-    text-align: center;
 }
 
 h2{
     color: black;
     font-size:30px;
-    text-align: center;
 }
 
 #main{
     color: green;
     font-size:20px;
-    text-align: center;
 }
 #startButton{
     background-color: #008CBA;
