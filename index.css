@@ -27,4 +27,9 @@ h2{
     margin: 4px 2px;
     cursor: pointer;
   }
-
+#timer{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+}

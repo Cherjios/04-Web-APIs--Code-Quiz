@@ -18,7 +18,9 @@ setTextcodingQuizchallenge();
 startButtonEl.addEventListener("click", function(){
     //Start time 
     startTimer();
-    
+    questionEl.textContent = "";
+    mainEl.textContent = "";
+
 })
 
 
