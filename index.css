@@ -27,6 +27,19 @@ h2{
     margin: 4px 2px;
     cursor: pointer;
   }
+  
+ #AButton,  #BButton, #CButton, #DButton {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    /* display: none; */
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 #timer{
     font-size: 25px;
     font-weight: bold;
