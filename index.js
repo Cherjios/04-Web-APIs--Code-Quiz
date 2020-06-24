@@ -139,11 +139,28 @@ function MakeQuestion2(){
     CButtonEl.textContent = question2.C;
     DButtonEl.style.display ="inline-block";
     DButtonEl.textContent = question2.correctAnswer;
-    
+    //Wrong Answer
     AButtonEl.addEventListener("click",function(){
         MakeQuestion3();
         scoreEl.textContent = "Score "+ scoreCount;
         
+    })
+    BButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion3();
+        scoreEl.textContent = "Score "+ scoreCount;
+
+    })
+    CButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion3();
+        scoreEl.textContent = "Score "+ scoreCount;
     })
     //Right Answer
     DButtonEl.addEventListener("click",function(){
@@ -165,12 +182,35 @@ function MakeQuestion3(){
     CButtonEl.textContent = question3.C;
     DButtonEl.style.display ="inline-block";
     DButtonEl.textContent = question3.A;
-    BButtonEl.addEventListener("click",function(){
+     //Wrong Answer
+     AButtonEl.addEventListener("click",function(){
+        MakeQuestion4();
+        scoreEl.textContent = "Score "+ scoreCount;
         
-        
+    })
+    CButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion4();
+        scoreEl.textContent = "Score "+ scoreCount;
+
+    })
+    CButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion4();
+        scoreEl.textContent = "Score "+ scoreCount;
     })
     //Right Answer
-    AButtonEl.addEventListener("click",function(){
+    BButtonEl.addEventListener("click",function(){
         MakeQuestion4();
+        scoreCount = score + 10;
+        scoreEl.textContent = "Score "+ scoreCount;
+
     })
+    
 }
