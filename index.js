@@ -118,7 +118,6 @@ function MakeQuestion1(){
        
         MakeQuestion2();
         scoreEl.textContent = "Score "+ scoreCount;
-
     })
 
     //Right Answer
@@ -142,12 +141,16 @@ function MakeQuestion2(){
     DButtonEl.textContent = question2.correctAnswer;
     
     AButtonEl.addEventListener("click",function(){
-        
+        MakeQuestion3();
+        scoreEl.textContent = "Score "+ scoreCount;
         
     })
     //Right Answer
     DButtonEl.addEventListener("click",function(){
         MakeQuestion3();
+        scoreCount = score + 10;
+        scoreEl.textContent = "Score "+ scoreCount;
+
     })
 }
 
