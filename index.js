@@ -3,6 +3,7 @@ var mainEl = document.getElementById("main");
 var startButtonEl = document.getElementById("startButton");
 var timerEl = document.getElementById("timer");
 var scoreEl = document.getElementById("score");
+var scoreCount = 0;
 //List of button answers
 var AButtonEl = document.getElementById("AButton");
 var BButtonEl = document.getElementById("BButton");
@@ -98,12 +99,33 @@ function MakeQuestion1(){
         // startTimer(timeLeft);
        
         MakeQuestion2();
+        scoreEl.textContent = "Score "+ scoreCount;
+
+    })
+    BButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion2();
+        scoreEl.textContent = "Score "+ scoreCount;
+
+    })
+    CButtonEl.addEventListener("click",function(){
+        clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+       
+        MakeQuestion2();
+        scoreEl.textContent = "Score "+ scoreCount;
 
     })
 
     //Right Answer
     DButtonEl.addEventListener("click",function(){
         MakeQuestion2();
+        scoreCount = 10;
+        scoreEl.textContent = "Score "+ scoreCount;
     })
 }
 
