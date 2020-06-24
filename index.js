@@ -73,60 +73,34 @@ function startTimer(timeLeft) {
       }
   
     }, 1000);
-
-    function MakeQuestion1(){
-        questionEl.textContent = "";
-        mainEl.textContent = "";
-        startButtonEl.style.display = "none";
-        questionEl.textContent = question1.question;
-        AButtonEl.style.display ="inline-block";
-        AButtonEl.textContent = question1.A;
-        BButtonEl.style.display ="inline-block";
-        BButtonEl.textContent = question1.B;
-        CButtonEl.style.display ="inline-block";
-        CButtonEl.textContent = question1.C;
-        DButtonEl.style.display ="inline-block";
-        DButtonEl.textContent = question1.correctAnswer;
-        //Wrong Answer
-        AButtonEl.addEventListener("click",function(){
-            clearInterval(timeInterval);
-            // timeLeft = timeLeft - 15;
-            // startTimer(timeLeft);
-        })
-        //Right Answer
-        DButtonEl.addEventListener("click",function(){
-            MakeQuestion2();
-        })
-    }
-
-
   }
 
-// function MakeQuestion1(){
-//     questionEl.textContent = "";
-//     mainEl.textContent = "";
-//     startButtonEl.style.display = "none";
-//     questionEl.textContent = question1.question;
-//     AButtonEl.style.display ="inline-block";
-//     AButtonEl.textContent = question1.A;
-//     BButtonEl.style.display ="inline-block";
-//     BButtonEl.textContent = question1.B;
-//     CButtonEl.style.display ="inline-block";
-//     CButtonEl.textContent = question1.C;
-//     DButtonEl.style.display ="inline-block";
-//     DButtonEl.textContent = question1.correctAnswer;
-//     //Wrong Answer
-//     AButtonEl.addEventListener("click",function(){
-//         var timeLeft = 0;
-//         clearInterval(startTimer);
-//         timeLeft = timeLeft - 15;
-//         startTimer(timeLeft);
-//     })
-//     //Right Answer
-//     DButtonEl.addEventListener("click",function(){
-//         MakeQuestion2();
-//     })
-// }
+function MakeQuestion1(){
+    questionEl.textContent = "";
+    mainEl.textContent = "";
+    startButtonEl.style.display = "none";
+    questionEl.textContent = question1.question;
+    AButtonEl.style.display ="inline-block";
+    AButtonEl.textContent = question1.A;
+    BButtonEl.style.display ="inline-block";
+    BButtonEl.textContent = question1.B;
+    CButtonEl.style.display ="inline-block";
+    CButtonEl.textContent = question1.C;
+    DButtonEl.style.display ="inline-block";
+    DButtonEl.textContent = question1.correctAnswer;
+    //Wrong Answer
+    AButtonEl.addEventListener("click",function(){
+        // clearInterval(startTimer);
+        // timeLeft = 45;
+        // startTimer(timeLeft);
+        MakeQuestion2();
+    })
+
+    //Right Answer
+    DButtonEl.addEventListener("click",function(){
+        MakeQuestion2();
+    })
+}
 
 function MakeQuestion2(){
     startButtonEl.style.display = "none";
