@@ -20,6 +20,7 @@ startButtonEl.addEventListener("click", function(){
     startTimer();
     questionEl.textContent = "";
     mainEl.textContent = "";
+    startButtonEl.style.display = "none";
 
 })
 
